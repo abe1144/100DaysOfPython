@@ -30,6 +30,13 @@ class Snake:
 
         self.segments[0].forward(20)
 
+    def reset(self):
+        for seg in self.segments:
+            seg.goto(1000, 1000)
+        self.segments.clear()
+        self.create_snake()
+        self.head = self.segments[0]
+
     def up(self):
         if self.segments[0].heading() != 270:
             self.segments[0].setheading(90)
