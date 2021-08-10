@@ -1,5 +1,4 @@
 from turtle import Turtle
-import os
 
 
 class Scoreboard(Turtle):
